@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Employeur</title>
+</head>
+
+<body class=" max-h-full overflow-y-auto max-w-full overflow-x-hidden font-['Montserrat'] ">
+    <header class="bg-[#FFF]  ">
+        <nav
+            class='  lg:w-[100%]  lg:pt-10 lg:pl-10 lg:pr-10 lg:h-[92px] lg:max-w-full lg:flex  lg:items-center lg:justify-between lg:static  flex flex-row justify-items-center justify-center align-center my-auto p-[20] lg:border-none'>
+
+            <div class=" lg:h-[57px] lg:w-[200px] lg:absolute lg:top-0 lg:left-[210px] "
+                style="background-image: url('./images/logo-shape.png');">
+            </div>
+            <div class=" lg:w-[463px] lg:h-[373px] lg:z-[-1]  lg:border-none lg:top-0 lg:right-[160px] lg:hidden"
+                style="background-image:url('./images/logo-shape(6).png')"></div>
+            <div class="lg:flex">
+                <img class="lg:w-[160px] lg:h-[44px] sm:w-[20%] w-[50%]" src="./images/Logo.png" alt='' />
+            </div>
+            <div class="lg:flex lg:mx-auto hidden">
+                <a href="./index.html" class="lg:p-4 lg:gap-10 lg:text-[14px] lg:leading-[22px] lg:font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 lg:hover:text-red-300
+                                ">ACCUEIL</a>
+                <a href="./about.html"
+                    class="lg:p-4 lg:gap-10  lg:text-[14px] vleading-[22px] lg:font-[700] lg:text-[#201E1E] lg:hover:underline lg:hover:underline-offset-8 lg:hover:text-red-300">A
+                    PROPOS</a>
+                <a href="./employeur.html"
+                    class="lg:p-4 lg:gap-10 lg:text-[14px] lg:leading-[22px] lg:font-[700] lg:text-[#201E1E] lg:hover:underline lg:hover:underline-offset-8 lg:hover:text-red-300">VOUS
+                    ETES
+                    EMPLOYEUR</a>
+                <a href="./candidat.html"
+                    class="lg:p-4 lg:gap-10  lg:text-[14px] lg:leading-[22px] lg:font-[700] lg:text-[#201E1E]lg:hover:underline lg:hover:underline-offset-8 lg:hover:text-red-300">VOUS
+                    ETES
+                    CANDIDAT</a>
+            </div>
+            <div class="lg:flex lg:items-center  flex items-center">
+                <img src="./images/earth-americas.png" class="w-[16px] h-[16px] hidden" alt="">
+                <a href="" class="lg:font-[700] lg:text-[14px] lg:leading-[22px] lg:text-[#201E1E] hidden">EN</a>
+                <button class="lg:border-[1px] lg:rounded-[20px] lg:py-[9px] lg:px-[24px] lg:border-[#DA4167] lg:text-[14px] lg:text-[#DA4167] lg:font-[700] lg:leading-[22px] lg:hover:bg-[#da4167] lg:hover:text-[#FFF]
+                                        border-[1px] rounded-[20px] py-[9px] px-[24px] border-[#DA4167] text-[14px] text-[#DA4167] font-[700] leading-[22px] hover:bg-[#da4167] hover:text-[#FFF] justify-items-center mr-[20px]
+                                        " id="sidebarToggle">CONTACT</button>
+            </div>
+            <div class="ml-[25px]">
+                <button id="menuButton"
+                    class="bg-black text-white px-3  py-2   absolute z-[3]  focus:outline-none ml-[90px] lg:hidden block right-0">☰</button>
+            </div>
+            <div class="h-screen bg-[#FFFFFF] text-white  fixed overflow-hidden transition-transform transform -translate-x-full ease-in-out duration-300 lg:hidden w-[100%] z-[2]"
+                id="menuBar">
+                <ul class=" w-[100%]">
+                    <li><a href="./index.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">ACCUEIL</a>
+                    </li>
+                    <li><a href="./about.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">A
+                            PROPOS</a></li>
+                    <li><a href="./employeur.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">VOUS
+                            ETES
+                            EMPLOYEUR</a></li>
+                    <li><a href="./candidat.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">VOUS
+                            ETES
+                            CANDIDAT</a></li>
+                </ul>
+            </div>
+            <div id="sidebar"
+                class="lg:bg-white h-screen lg:w-[50%]  absolute z-[40]  overflow-y-hidden top-0  lg:right-0 lg:transform lg:translate-x-[64] lg:transition-transform lg:ease-in-out  hidden duration-300 flex flex-col translate-x-[20] transition-transform ease-in-out w-[100%]  transform  bg-white">
+                <div class="w-[90%] mx-auto h-max">
+                    <button id="close" class="ml-auto p-[20px]">X</button>
+                    <h1 class="font-[600] text-[24px] leading-[36px] text-[#253993]">N’hésitez pas à nous
+                        contacter
+                        pour toute
+                        question, ou demande d’informations.</h1>
+                    <img src="./images/phone-icon.png" class="h-[100px] w-[100px]" alt="">
+                    <p class="'text-[#252993] font-[600] text-[20px] leading-[30px]">Par téléphone au:</p>
+                    <p class="font-[600] text-[20px] leading-[30px] text-[#DA4167]">+1 (514) 333-6608</p>
+                    <p>Nos opérateurs sont
+                        disponible de lundi à vendredi, de 9h00 à 18h00.</p>
+                    <img src="./images/mail-icon.png" class="h-[100px] w-[100px]" alt="">
+                    <h1 class='text-[#252993] font-[600] text-[20px] leading-[30px]'>Par email, en nous
+                        envoyant
+                        votre message sur :</h1>
+                    <p class=" font-[600] text-[20px] leading-[30px] text-[#DA4167]">info@amyressources.ca
+                    </p>
+                    <img src="./images/whatsapp-icon.png" class="h-[100px] w-[100px]" alt="">
+                    <h1 class="'text-[#252993] font-[600] text-[20px] leading-[30px]">Ou par chat direct sur
+                        Whatsapp, au :</h1>
+                    <p class="font-[600] text-[20px] leading-[30px] text-[#DA4167]">+1 (514) 555-1234</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div
+        class=" h-[300px]  relative w-full  flex bg-gradient-to-b from-slate-200 to bg-transparent  z[-5] xl:h-[300px]  xl:relative xl:w-full  xl:flex lg:h-[300px]  lg:relative lg:w-full  lg:flex md:h-[300px]  md:relative md:w-full  md:flex">
+        <img src="./images/logo-shape-header.png" class="h-[120px]  top-[-20px] absolute left-[0%] z-[-1] 
+        xl:h-[120px]  xl:top-[0] xl:absolute xl:left-[0%]
+        lg:h-[120px]  lg:top-[0] lg:absolute lg:left-[0%] 
+        md:h-[120px]  md:top-[0] md:absolute md:eft-[0%] 
+        " alt="">
+        <img src="./images/logo-shape(16).png" alt="" class="z-[-1] h-[90px] absolute top-[-40px]  right-[18%]
+        xl:z-4 xl:h-[90px] xl:absolute xl:top-[21%]  xl:right-[18%]
+        lg:z-4 lg:h-[90px] lg:absolute lg:top-[21%]  lg:right-[18%]
+        md:z-4 md:h-[90px] md:absolute md:top-[1%]  md:right-[18%]">
+        <img src="./images/logo-shape(15).png" class="hidden top-[12%] right-[105px] h-[60px] 
+        xl:absolute xl:top-[12%] xl:right-[105px] xl:h-[60px]
+        lg:absolute lg:top-[12%] lg:right-[105px] lg:h-[60px]
+        md:absolute md:top-[12%] md:right-[105px] md:h-[60px]
+        " alt="">
+        <img src="./images/blue-shape-header.png" class="w-[20%] absolute z-[1]  block xl:hidden lg:hidden  right-0 top-[20%] 
+        xl:w-[20%] xl:absolute xl:z-[-1] xl:right-0 xl:top-[20%]
+        lg:w-[20%] lg:absolute lg:z-[-1] lg:right-0 lg:top-[20%]
+        md:w-[20%] md:absolute md:z-[-1] md:right-0 md:top-[20%] " alt="">
+        <img src="./images/logo-shape(14).png" alt="" class="absolute top-[0] h-[80px] left-[35%] z-[1] 
+        xl:absolute xl:top-[10%] xl:h-[80px] xl:left-[13%]
+        lg:absolute lg:top-[10%] lg:h-[80px] lg:left-[13%]
+        md:absolute md:top-[10%] md:h-[80px] md:left-[73%] md:z-1">
+        <img src="./images/shape.png" alt="" class="
+        absolute top-[50%] left-[30%] z-[-1] w-[40%]
+        xl:absolute xl:top-[10%] xl:left-[40%] xl:w-[10%]
+        lg:absolute lg:top-[10%] lg:left-[45%]
+        md:absolute md:top-[30%] md:left-[45%] md:w-[20%]">
+        <img src="./images/logo-shape(8).png" alt=""
+            class="hidden z-[-2] top-[0] h-[200px] right-[0] xl:absolute xl:z-[0] xl:top-[0] xl:h-[200px] xl:right-[20%] lg:absolute lg:z-[0] lg:top-[0] lg:h-[200px] lg:right-[20%] md:absolute md:z-[0] md:top-[0] md:h-[200px] md:right-[20%]">
+        <img src="./images/white-shape.png" alt="" class="absolute right-0 top-[10px] z-[-1]
+        xl:absolute xl:right-0 xl:top-[110px]
+        md:hidden md:right-0 md:top-[110px]
+        sm:absolute sm:right-0 sm:top-[110px] ">
+        <div class="w-[80%] mx-auto flex flex-col justify-center">
+            <div class="w-[70px] h-[84px] absolute top-[-20px] z-[-10] left-[50%] lg:hidden xl:hidden md:hidden"
+                style="background-image: url('./images/logo-shape\(5\).png');"></div>
+            <h1 class="font-[800] text-[40px] leading-[68px] text-[#253993] font-['Montserrat']"> Vous êtes employeur
+            </h1>
+
+            <h5 class="pt-[20px] font-[400] text-[20px] leading-[30px] text-[#414040]  z-[1]">Urna a venenatis
+                ullamcorper est ut tellus suscipit quisque libero sollicitudin aenean</h5>
+        </div>
+    </div>
+    <div class="w-[100%] h-[400px] mt-[60px]
+   xl:w-[100%] xl:h-[400px] xl:mt-[80px]
+    lg:w-[100%] lg:h-[400px] lg:mt-[80px]
+    md:w-[100%] md:h-[400px] md:mt-[80px]
+    flex">
+        <div class="w-[90%] flex flex-col mx-auto
+        xl:w-[80%] xl:flex xl:flex-row xl:mx-auto
+        lg:w-[80%] lg:flex lg:flex-row lg:mx-auto
+        md:w-[80%] md:flex md:flex-col md:mx-auto  ">
+            <div class="w-[85%] flex flex-col mx-auto gap-[20px] justify-center 
+            xl:w-[50%] xl:flex xl:flex-col xl:mx-auto xl:gap-[20px] xl:justify-center
+            lg:w-[50%] lg:flex lg:flex-col lg:mx-auto lg:gap-[20px] lg:justify-center
+            mg:w-[50%] md:flex md:flex-col md:mx-auto md:gap-[20px] md:justify-center">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#1A2867]">Services adaptés à vos besoins </p>
+                <p class="font-[600] text-[28px] leading-[42px] text-[#1A2867]  ">Des solutions de ressources humaines
+                    pour votre entreprise
+                </p>
+                <img src="./images/underline.png" class="w-[100px]" alt="">
+                <p class="text-justify">Notre entreprise spécialisée dans le placement de ressources et l'intérim offre
+                    des solutions
+                    adaptées à vos besoins en
+                    ressources humaines.
+                    Nous fournissons des travailleurs temporaires qualifiés pour les pics d'activité ou le remplacement
+                    de personnel, des
+                    candidats qualifiés pour les postes permanents de production, de supervision et de gestion, ainsi
+                    que des services
+                    complets de sous-traitance industrielle pour vos projets de fabrication.
+                    Nous travaillons en étroite collaboration avec vous pour comprendre vos besoins spécifiques et vous
+                    proposer des
+                    solutions efficaces pour votre entreprise.</p>
+
+            </div>
+            <div class=" flex flex-col w-[90%]  mx-auto gap-[30px]
+            xl:flex xl:flex-col xl:w-[30%]  xl:mx-auto xl:gap-[20px]
+            lg:flex lg:flex-col lg:w-[50%]  lg:mx-auto lg:gap-[20px]
+            md:flex md:flex-col md:w-[80%]  md:mx-auto md:gap-[20px]">
+                <img src="./images/people.png" alt="">
+                <img src="./images/shape.png" alt=""
+                    class="xl:absolute xl:top-[710px] xl:z-[-1] xl:right-[640px]  xl:w-[10%] lg:w-[30%] lg:top-[520px] lg:absolute md:w-[40%] md:top-[950px] md:absolute md:z-[-1] absolute w-[30%] top-[1100px]  z-[-1]">
+            </div>
+        </div>
+    </div>
+    <div class="w-[100%]   mt-[600px] mx-auto flex flex-col 
+    xl:w-[100%]  xl:my-[200px] xl:mt-[300px]  xl:flex xl:flex-row
+    lg:w-[100%]  lg:my-[200px] lg:mt-[300px]  lg:flex lg:flex-row 
+    md:w-[100%]  md:my-[200px] md:mt-[500px]  md:flex md:flex-row ">
+        <div class="w-[90%] h-[400px] flex flex-col mx-auto
+            lg:w-[90%] lg:h-[400px] lg:flex lg:flex-row lg:mx-auto
+        xl:w-[70%] xl:h-[400px] xl:flex xl:flex-row  
+        md:w-[90%] md:h-[400px] md:flex md:flex-row ">
+            <div class="mt-[20px] w-[90%] h-[400px] flex flex-col mx-auto
+            md:w-[30%] md:h-[400px] md:flex md:flex-col 
+           xl:w-[30%] xl:h-[400px] xl:flex xl:flex-col 
+            lg:w-[30%] lg:h-[400px] lg:flex lg:flex-col  ">
+                <h1 class="font-[600] text-[20px] leading-[30px] text-[#253993] pb-[20px]">Placement de travailleurs
+                    temporaires
+                </h1>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Travailleurs
+                    temporaires
+                    qualifiés
+                    pour pics
+                    d'activité ou remplacement de personnel.</p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]"> > Base de données
+                    de
+                    travailleurs prêts
+                    pour missions temporaires en production.</p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Travailleurs
+                    temporaires
+                    disponibles
+                    pour missions courantes de production.</p>
+            </div>
+            <div class=" mt-[20px] w-[90%] h-[400px] flex flex-col mx-auto
+            md:w-[30%] md:h-[400px] md:flex md:flex-col 
+           xl:w-[30%] xl:h-[400px] xl:flex xl:flex-col 
+            lg:w-[30%] lg:h-[400px] lg:flex lg:flex-col ">
+                <h1 class="font-[600] text-[20px] leading-[30px] text-[#253993] pb-[20px]">Placement de personnel
+                    permanent qualifié</h1>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Trouvez le
+                    candidat idéal avec notre service de placement permanent.</p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Nous trouvons
+                    candidats qualifiés pour postes de production, supervision et gestion.</p>
+                <p>> Vivier de talents qualifiés pour répondre aux besoins de votre entreprise.</p>
+            </div>
+            <div class=" mt-[20px] w-[90%] h-[400px] flex flex-col mx-auto
+            md:w-[30%] md:h-[400px] md:flex md:flex-col 
+           xl:w-[30%] xl:h-[400px] xl:flex xl:flex-col 
+            lg:w-[30%] lg:h-[400px] lg:flex lg:flex-col">
+                <h1 class="font-[600] text-[20px] leading-[30px] text-[#253993] pb-[20px]">Solutions de sous-traitance
+                    de fabrication</h1>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Sous-traitez vos
+                    projets de fabrication avec notre service clé en main.</p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Gamme complète de
+                    services de sous-traitance pour fabrication.</p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E] pl-[10px] py-[10px]">> Partenaires
+                    qualifiés pour projets de fabrication de grande envergure.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="w-[100%]  mx-auto  relative mt-[800px]
+    xl:w-[90%]  xl:mx-auto xl:h-[700px] xl:relative xl:mt-[20px]
+    lg:w-[100%]  lg:mx-auto lg:h-[700px] lg:relative lg:mt-[200px]
+    md:w-[90%]  md:mx-auto md:h-[700px] md:relative md:mt-[320px]">
+        <div class=" flex flex-col h-[700px]
+        xl:grid xl:gap-4 xl:grid-cols-2 xl:grid-rows-2 xl:h-[700px]
+        md:flex md:flex-col  md:h-[700px]
+        lg:grid lg:gap-4 lg:grid-cols-2 lg:grid-rows-2 lg:h-[700px]]">
+            <div
+                class=" relative  h-[700px]  w-[90%] mx-auto md:relative  md:h-[700px]  md:w-[100%] xl:relative  xl:h-[700px]  xl:w-[50%] lg:relative  lg:h-[700px]  lg:w-[50%] ">
+                <p class="font-[600] text-[16px] leading-[24px] text-[#1A2867]">Notre processus</p>
+                <p class="font[600] text-[28px] leading-[42px] text-[#1A2867]">Conçu pour répondre précisément à vos
+                    besoins.</p>
+                <div class="flex flex-row mt-[15px] mb-[10px]">
+                    <img src="./images/logo-shape-1.png" alt="">
+                    <img src="./images/logo-shape-1.png" alt="">
+                    <img src="./images/logo-shape-1.png" alt="">
+                    <img src="./images/logo-shape-1.png" alt="">
+                    <img src="./images/logo-shape-1.png" alt="">
+                    <img src="./images/logo-shape-5.png" alt="">
+                    <img src="./images/logo-shape-6.png" alt="">
+                </div>
+                <p class="font-[400] text-[18px] leading-[28px] text-[#1A2867]">Notre approche personnalisée garantit
+                    que vous recevrez des travailleurs qualifiés, expérimentés et parfaitement adaptés
+                    à vos besoins, pour des résultats optimaux en matière de productivité et de satisfaction client.
+                </p>
+
+                <img class="absolute top-[30%] z-[-1]" src="./images/shape-losagne.png" alt="">
+
+            </div>
+            <div class="grid md:grid-cols-2 mt-[48px] gap-5 mx-auto w-[90%]">
+                <div>
+                    <img src="./images/icon-wrap(16).png" alt="">
+                    <p class="font-[600] text-[24px] leading-[36px] text-[#253993]">Analyse de vos besoins de production
+                    </p>
+
+                    <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E]">Nous travaillerons avec vous pour
+                        comprendre les besoins de votre entreprise en matière de main-d'œuvre, y compris les
+                        compétences requises, le volume de travail et les délais de production.</p>
+                </div>
+                <div>
+                    <img src="./images/icon-wrap(17).png" alt="">
+                    <p class="font-[600] text-[24px] leading-[36px] text-[#253993]">Recherche de candidats qualifiés</p>
+
+                    <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E]">Nous identifierons des candidats
+                        qualifiés, en utilisant des outils tels que des bases de données de candidats, des
+                        réseaux de professionnels et des plateformes en ligne.</p>
+                </div>
+                <div class="mt-[10px]">
+                    <img src="./images/icon-wrap(19).png" alt="">
+                    <p class="font-[600] text-[24px] leading-[36px] text-[#253993]">Présentation des candidats pour
+                        votre approbation.</p>
+
+                    <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E]">Nous sélectionnerons les candidats
+                        les mieux qualifiés pour chaque poste, et nous vous les présenterons pour que vous
+                        puissiez les évaluer et prendre une décision éclairée.</p>
+                </div>
+                <div class="mt-[10px]">
+                    <img src="./images/icon-wrap(18).png" alt="">
+                    <p class="font-[600] text-[24px] leading-[36px] text-[#253993]">Suivi des candidats et soutien
+                        continu</p>
+                    <p class="font-[400] text-[16px] leading-[24px] text-[#201E1E]">Nous serons disponibles pour vous
+                        aider que ce soit pour répondre à des questions, pour fournir des informations
+                        supplémentaires sur les candidats ou pour vous aider à résoudre des problèmes éventuels.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" mt-[1200px] w-[100%] bg-[#1D318C] h-[1400px] flex justify-center items-center relative
+    xl:mt-[200px] xl:w-[100%]  xl:h-[900px] xl:flex xl:justify-center xl:items-center xl:relative
+    lg:mt-[400px] lg:w-[100%]  lg:h-[900px] lg:flex lg:justify-center lg:items-center lg:relative
+    md:mt-[400px] md:w-[100%]  md:h-[900px] md:flex md:justify-center md:items-center md:relative
+    ">
+        <div class="w-[90%] mx-auto py-[40px] flex flex-col">
+            <div>
+                <h1 class="font-[600] text-[16px] leading-[24px] text-[#FFFFFF] pt-[40px]">Parlez-nous de votre projet
+                </h1>
+
+                <p class="font-[600] text-[28px] leading-[42px] text-[#FFFF]">Besoin de ressources pour votre entreprise
+                    ?
+                    <br>
+                    Contactez-nous !
+                </p>
+                <img src="./images/underline2.png" class='w-[150px]' alt="">
+                <p class="font-[400] text-[16px] leading-[24px] text-[#FFFFFF] pt-[20px]  xl:w-[70%] w-[100%]">
+                    Remplissez le
+                    formulaire
+                    ci-dessous
+                    pour nous faire part de vos besoins en
+                    matière de personnel
+                    intérimaire ou
+                    permanent. Nous vous contacterons pour discuter des options de placement disponibles. Notre équipe
+                    d'experts en
+                    recrutement est là pour vous accompagner à chaque étape.</p>
+            </div>
+            <div class="flex flex-col gap-5 pt-[10px] w-[95%] mx-auto
+            xl:grid xl:grid-cols-3 xl:gap-[50px] xl:py-[50px] xl:z-[2] xl:w-[100%] xl:mx-auto
+            lg:grid lg:grid-cols-3 lg:gap-[50px] lg:py-[50px] lg:z-[2]
+            md:grid md:grid-cols-3 md:gap-[50px] md:py-[50px] md:z-[2] md:w-[100%] md:justify-items-center">
+                <div>
+                    <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Dénomination / Raison sociale</p>
+                    <input type="text" class='w-[100%] py-[20px] xl:px-[200px]'>
+                </div>
+                <div>
+                    <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Personne à contacter</p>
+                    <input type="text" class='w-[100%] py-[20px] xl:px-[200px]'>
+                </div>
+                <div>
+                    <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Adresse email</p>
+                    <input type="text" class='w-[100%] py-[20px] xl:px-[200px]'>
+                </div>
+                <div>
+                    <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Numéro de téléphone</p>
+                    <input type="text" class='w-[100%] py-[20px] xl:px-[200px]'>
+                </div>
+                <div>
+                    <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Ville</p>
+                    <input type="text" class='w-[100%] py-[20px] xl:px-[200px]'>
+                </div>
+                <div>
+                    <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Secteur d’activité</p>
+                    <input type="text" class='w-[100%] py-[20px] xl:px-[200px]'>
+                </div>
+            </div>
+            <div>
+                <p class="font-[700] text-[16px] leading-[24px] text-[#FFFFFF]">Décrivez-nous votre projet / mission</p>
+                <input type="text" class="w-[100%] py-[30px] xl:px-[200px]">
+            </div>
+            <div>
+                <button class="my-[50px] bg-[#DA4167] py-[10px] px-[40px] text-[#FFFFFF] rounded">Envoyer</button>
+            </div>
+        </div>
+        <img src="./images/blue-shape.png" alt="" class="absolute top-[40px] right-0 h-[500px] z-[-1]">
+        <img src="./images/logo-shape(7).png" alt="" class="absolute z-[0] bottom-[0]  right-[50%] h-[170px]"><img
+            src="./images/logo-shape(7).png" class="absolute z-[0] bottom-[0]  h-[90px] right-[48%]" alt="">
+    </div>
+    <div class=" swiper1 mt-[100px]  w-full  mx-auto   
+        xl:mt-[20px]  xl:w-full  xl:mx-auto   xl:h-[500px]
+        lg:mt-[100px]  lg:w-full  lg:mx-auto   lg:h-[500px]
+        md:mt-[200px]  md:w-full  md:mx-auto   md:h-[500px]">
+        <div class="swiper-wrapper  h-[400px] my-auto ">
+            <div class="w-[900px] mx-auto   h-[300px] swiper-slide flex flex-row justify-center items-center">
+                <img src="./images/quotes.png" class='w-[60px] h-[40px] mt-[20px] mx-auto relative top-[80px] ' alt="">
+                <h1
+                    class="text-[40px] w-[90%] mx-auto xl:text-[103px] md:text-[80px] lg:text-[103px] z-[-1]  relative top-[40px] xl:relative xl:top-[60px]  lg:relative lg:top-[60px] md:relative md:top-[20px]  font-extrabold text-[#f2f2f2]  text-center">
+                    TEMOIGNAGES
+                </h1>
+                <p
+                    class="font-[400] text-[18px] leading-[28px] text-[#201E1E] text-justify  xl:text-center lg:text-center md:text-center   xl:w-[50%] lg:w-[50%] md:w-[90%]  w-[90%]  mt-[20px] mx-auto">
+                    Ipsum
+                    ipsum
+                    vulputate
+                    lectus
+                    ultrices amet
+                    metus tortor
+                    urna
+                    pellentesque.
+                    Ut euismod et vitae varius
+                    laoreet dis. Sit
+                    malesuada id nisi amet diam potenti. Nunc orci donec dui leo amet proin. Leo risus sit arcu
+                    facilisi
+                    quam dui praesent
+                    ultrices est.
+                    Praesent urna aenean diam et. In libero urna tortor praesent in nunc posuere sed porttitor.
+                    Neque
+                    tellus
+                    vitae placerat
+                    scelerisque ipsum elementum vel eu. Dictum gravida pharetra aliquet at consectetur. Arcu
+                    facilisis
+                    id ut
+                    dolor augue eu
+                    tellus sed. Laoreet donec pretium bibendum massa feugiat. Nam tristique congue sed.</p>
+                <p class="font[700] text-[18px] leading-[28px] text-center text-[#201E1E]">Richard Dufresne</p>
+                <p class="font[400] text-[16px] leading-[24px] text-center text-[#6E6D6D]">Directeur financier |
+                    Loblaw
+                    Companies Limited
+                </p>
+            </div>
+            <div class="w-[900px] mx-auto   h-[300px]  swiper-slide items-center">
+                <img src="./images/quotes.png" class='w-[60px] h-[40px] mt-[20px] mx-auto relative top-[80px] ' alt="">
+
+                <h1
+                    class="ext-[40px] w-[90%] mx-auto xl:text-[103px] md:text-[80px] lg:text-[103px] z-[-1]  relative top-[40px] xl:relative xl:top-[60px]  lg:relative lg:top-[60px] md:relative md:top-[20px]  font-extrabold text-[#f2f2f2]   text-center">
+                    TEMOIGNAGES
+                </h1>
+                <p
+                    class="font-[400] text-[18px] leading-[28px] text-[#201E1E] text-justify  xl:text-center lg:text-center md:text-center   xl:w-[50%] lg:w-[50%] md:w-[90%]  w-[90%]  mt-[20px] mx-auto">
+                    Imperdiet
+                    sem
+                    quisque ut erat enim cursus rutrum. Tristique adipiscing turpis risus consequat ultricies
+                    suspendisse
+                    tellus. Eget ac pharetra at quis arcu. Fringilla cursus nunc pellentesque rutrum egestas
+                    pharetra convallis. Arcu orci
+                    id ut commodo. Sit cursus tincidunt netus gravida felis nibh urna tristique turpis. Vitae
+                    ullamcorper erat arcu
+                    phasellus quis blandit. Dui tristique eget enim donec purus. Duis pellentesque et diam
+                    vulputate. Gravida eu est blandit
+                    hac massa at sit faucibus vitae.
+                    At suscipit arcu sit bibendum placerat. Magna lectus placerat massa congue sed.</p>
+                <p class="font[700] text-[18px] leading-[28px] text-center text-[#201E1E]">Miyo Yamashita</p>
+                <p class="font[400] text-[16px] leading-[24px] text-center text-[#6E6D6D]">Président et chef de
+                    la direction |
+                    Princess Margaret Cancer Foundation
+                </p>
+
+            </div>
+            <div class="w-[900px] mx-auto   h-[300px]  swiper-slide items-center">
+                <img src="./images/quotes.png" class='w-[60px] h-[40px] mt-[20px] mx-auto relative top-[80px] ' alt="">
+
+                <h1
+                    class="ext-[40px] w-[90%] mx-auto xl:text-[103px] md:text-[80px] lg:text-[103px] z-[-1]  relative top-[40px] xl:relative xl:top-[60px]  lg:relative lg:top-[60px] md:relative md:top-[20px]  font-extrabold text-[#f2f2f2]  text-center">
+                    TEMOIGNAGES
+                </h1>
+                <p
+                    class="ffont-[400] text-[18px] leading-[28px] text-[#201E1E] text-justify  xl:text-center lg:text-center md:text-center   xl:w-[50%] lg:w-[50%] md:w-[90%]  w-[90%]  mt-[20px] mx-auto">
+                    Ipsum
+                    ipsum
+                    .Id donec venenatis nunc nibh laoreet nam. Dolor tempus gravida natoque nunc odio diam.
+                    Aliquam quis amet mus sit sit sed
+                    dui. Ornare viverra odio risus urna. Ut suspendisse dui in neque. Dis pulvinar convallis ac
+                    id eget.
+                    Cras accumsan gravida sed eu donec bibendum. Elementum justo feugiat ac interdum posuere.
+                    Vel massa rhoncus bibendum
+                    tempor quis massa a. Semper amet malesuada iaculis ultricies lobortis aliquam parturient.
+                    Eget diam in orci erat
+                    pellentesque morbi maecenas nunc. Nisl eget diam mauris erat et et at nisi enim. Ipsum diam
+                    tellus velit nulla semper.</p>
+                <p class="font[700] text-[18px] leading-[28px] text-center text-[#201E1E]">Bret Leech</p>
+                <p class="font[400] text-[16px] leading-[24px] text-center text-[#6E6D6D]">Chef de la dir. des
+                    RH |
+                    Rogers Communications Inc.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div
+        class="relative w-[50%] xl:w-[10%] xl:mt-[50px] md:w-[20%] md:mt-[40px]  lg:w-[10%]  lg:mt-[150px] mx-auto mt-[100px]">
+        <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <footer class="relative">
+        <img src="./images/logo-shape(10).png"
+            class="absolute top-[80px] right-[600px] z-[1] md:left-[160px] xl:left-[1000px]" alt="">
+        <div class=" mt-[200px] md:mt-[10px] lg:mt-[300px] ">
+            <div class="grid grid-rows-2  h-[400px] w-[90%]  p-5 content-center mx-auto bg-white  relative  border-2 rounded-lg shadow-lg top-[80px] 
+                    xl:grid xl:grid-cols-2 xl:w-[80%]  xl:p-20 xl:content-center xl:mr-auto xl:ml-auto  xl:relative  xl:border-2 xl:rounded-lg xl:shadow-lg xl:top-[80px]
+                    lg:grid lg:grid-cols-2 lg:w-[80%]  lg:p-20 lg:content-center lg:mr-auto lg:ml-auto   lg:relative  lg:border-2 lg:rounded-lg lg:shadow-lg lg:top-[80px]
+                    md:grid md:grid-cols-2 md:w-[80%]  md:p-20 md:content-center md:mr-auto md:ml-auto   md:relative  md:border-2 md:rounded-lg md:shadow-lg md:top-[80px]
+                    ">
+                <div class="w-[90%] mx-auto xl:w-[100%] md:w-[100%] lg:w-[100%] bg-white ">
+                    <p class="font[600] text-[34px] leading-[36px] text-[#253993] font-extrabold">Êtes-vous prêt à
+                        commencer une
+                        collaboration avec
+                        nous ?</p>
+                    <p class="font[600] text-[16px] leading-[24px] text-[#414040]">Nous serions ravis de discuter
+                        avec
+                        vous de la façon dont nous pouvons vous aider à atteindre vos
+                        objectifs commerciaux.</p>
+                    <p class=" mt-[20px] font[700] text-[16px] leading-[24px] text-[#DA4187]">Exprimer mon besoin
+                        <span class="w-[16px] h-[16px]">></span>
+                    </p>
+                </div>
+                <div
+                    class="mt-[40px] hidden  h-[20px] mr-auto xl:mt-[40px] xl:ml-auto lg:mt-[40px] lg:ml-auto md:mt-[40px] md:ml-auto ">
+                    <p class="font[700] text-[16px] leading-[24px] text-[#DA4187]">Exprimer mon besoin
+                        <span class="w-[16px] h-[16px]">></span>
+                    </p>
+                </div>
+                <img src="./images/logo-shape(11).png"
+                    class="absolute top-[140px]  z-[1] left-[400px] xl:absolute xl:top-[295px]  md:top-[295px]" alt="">
+            </div>
+            <div
+                class="w-[100%] h-[100%] ml-auto mr-auto md:w-[100%] md:h-[100%] md:ml-auto md:mr-auto xl:w-[100%] xl:h-[100%] xl:ml-auto xl:mr-auto lg:w-[100%] lg:h-[100%] lg:ml-auto lg:mr-auto">
+                <div class="flex flex-col   w-[100%] ml-auto mr-auto bg-[#F6FBFD]  lg:flex lg:flex-col lg:justify-between  lg:w-[100%] lg:ml-auto lg:mr-auto justify-normal  lg:p-[150px] 
+                    xl:flex xl:flex-row xl:justify-between  xl:w-[100%] xl:ml-auto xl:mr-auto  xl:p-[150px]
+                md:flex md:flex-col md:justify-between  md:w-[100%] md:ml-auto md:mr-auto  md:p-[150px]
+                    ">
+                    <div class="flex flex-col xl:flex xl:flex-col
+                         w-[90%] mx-auto lg:flex-col lg:flex mt-[100px] ">
+                        <img src="./images/Logo(1).png" alt=""
+                            class="xl:ml-[60px] lg:ml-[240px] md:ml-[95px] mx-auto w-[200px] md:mx-auto   md:w-[200px] ">
+                        <p
+                            class="xl:ml-20 xl:text-left xl:mr-auto lg:ml-[60px] md:ml-[0px] pt-[10px] text-[16px] leading-[24px] font-[400] text-[#9B9A9A] text-center">
+                            ©
+                            Copyright
+                            Amy Ressources
+                            2023 - Tous droits réservés - Mentions légales - Conditions générales d'utilisation</p>
+                    </div>
+                    <div class="flex  justify-betweenw-[90%] mx-auto py-[20px]">
+                        <img src="./images/social-link.png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                        <img src="./images/social-link(1).png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                        <img src="./images/social-link(2).png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                        <img src="./images/social-link(3).png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                bulletActiveClass: 'swiper-pagination-bullet-active',
+                clickable: 'true',
+            },
+        });
+        const swiper1 = new Swiper('.swiper1', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        const sidebar = document.getElementById("sidebar");
+        const sidebarToggle = document.getElementById("sidebarToggle");
+        const close = document.getElementById('close')
+        sidebarToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("translate-x-0");
+            sidebar.classList.toggle('hidden')
+            document.body.classList.toggle('overflow-y-hidden')
+            document.body.classList.toggle('opacity-1')
+        });
+        close.addEventListener('click', function () {
+            sidebar.classList.toggle("hidden");
+            document.body.classList.toggle('overflow-y-hidden')
+            document.body.classList.toggle('opacity-1')
+        })
+        const menuBar = document.getElementById('menuBar');
+        const menuButton = document.getElementById('menuButton');
+        function toggleMenubar() {
+            menuBar.classList.toggle('-translate-x-full');
+        }
+        menuButton.addEventListener('click', toggleMenubar);
+    </script>
+</body>
+
+</html>
+<!-- Vous êtes employeur -->

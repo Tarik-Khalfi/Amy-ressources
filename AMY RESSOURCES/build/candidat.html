@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Candidat</title>
+</head>
+
+<body class=" max-h-full overflow-y-auto max-w-full overflow-x-hidden font-['Montserrat'] ">
+    <header class="bg-[#FFF]  ">
+        <nav
+            class='  lg:w-[100%]  lg:pt-10 lg:pl-10 lg:pr-10 lg:h-[92px] lg:max-w-full lg:flex  lg:items-center lg:justify-between lg:static  flex flex-row justify-items-center justify-center align-center my-auto p-[20] lg:border-none'>
+
+            <div class=" lg:h-[57px] lg:w-[200px] lg:absolute lg:top-0 lg:left-[210px] "
+                style="background-image: url('./images/logo-shape.png');">
+            </div>
+            <div class=" lg:w-[463px] lg:h-[373px] lg:z-[-1]  lg:border-none lg:top-0 lg:right-[160px] lg:hidden"
+                style="background-image:url('./images/logo-shape(6).png')"></div>
+            <div class="lg:flex">
+                <img class="lg:w-[160px] lg:h-[44px] sm:w-[20%] w-[50%]" src="./images/Logo.png" alt='' />
+            </div>
+            <div class="lg:flex lg:mx-auto hidden">
+                <a href="./index.html" class="lg:p-4 lg:gap-10 lg:text-[14px] lg:leading-[22px] lg:font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 lg:hover:text-red-300
+                                    ">ACCUEIL</a>
+                <a href="./about.html"
+                    class="lg:p-4 lg:gap-10  lg:text-[14px] vleading-[22px] lg:font-[700] lg:text-[#201E1E] lg:hover:underline lg:hover:underline-offset-8 lg:hover:text-red-300">A
+                    PROPOS</a>
+                <a href="./employeur.html"
+                    class="lg:p-4 lg:gap-10 lg:text-[14px] lg:leading-[22px] lg:font-[700] lg:text-[#201E1E] lg:hover:underline lg:hover:underline-offset-8 lg:hover:text-red-300">VOUS
+                    ETES
+                    EMPLOYEUR</a>
+                <a href="./candidat.html"
+                    class="lg:p-4 lg:gap-10  lg:text-[14px] lg:leading-[22px] lg:font-[700] lg:text-[#201E1E]lg:hover:underline lg:hover:underline-offset-8 lg:hover:text-red-300">VOUS
+                    ETES
+                    CANDIDAT</a>
+            </div>
+            <div class="lg:flex lg:items-center  flex items-center">
+                <img src="./images/earth-americas.png" class="w-[16px] h-[16px] hidden" alt="">
+                <a href="" class="lg:font-[700] lg:text-[14px] lg:leading-[22px] lg:text-[#201E1E] hidden">EN</a>
+                <button class="lg:border-[1px] lg:rounded-[20px] lg:py-[9px] lg:px-[24px] lg:border-[#DA4167] lg:text-[14px] lg:text-[#DA4167] lg:font-[700] lg:leading-[22px] lg:hover:bg-[#da4167] lg:hover:text-[#FFF]
+                                            border-[1px] rounded-[20px] py-[9px] px-[24px] border-[#DA4167] text-[14px] text-[#DA4167] font-[700] leading-[22px] hover:bg-[#da4167] hover:text-[#FFF] justify-items-center mr-[20px]
+                                            " id="sidebarToggle">CONTACT</button>
+            </div>
+            <div class="ml-[25px]">
+                <button id="menuButton"
+                    class="bg-black text-white px-3  py-2   absolute z-[3]  focus:outline-none ml-[90px] lg:hidden block right-0">☰</button>
+            </div>
+            <div class="h-screen bg-[#FFFFFF] text-white  fixed overflow-hidden transition-transform transform -translate-x-full ease-in-out duration-300 lg:hidden w-[100%] z-[2]"
+                id="menuBar">
+                <ul class=" w-[100%]">
+                    <li><a href="./index.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">ACCUEIL</a>
+                    </li>
+                    <li><a href="./about.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">A
+                            PROPOS</a></li>
+                    <li><a href="./employeur.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">VOUS
+                            ETES
+                            EMPLOYEUR</a></li>
+                    <li><a href="./candidat.html"
+                            class="text-[14px] leading-[22px] font-[700] text-[#201E1E] hover:underline hover:underline-offset-8 hover:text-red-300 px-6 py-3 block">VOUS
+                            ETES
+                            CANDIDAT</a></li>
+                </ul>
+            </div>
+            <div id="sidebar"
+                class="lg:bg-white h-screen lg:w-[50%]  absolute z-[40]  overflow-y-hidden top-0  lg:right-0 lg:transform lg:translate-x-[64] lg:transition-transform lg:ease-in-out  hidden duration-300 flex flex-col translate-x-[20] transition-transform ease-in-out w-[100%]  transform  bg-white">
+                <div class="w-[90%] mx-auto h-max">
+                    <button id="close" class="ml-auto p-[20px]">X</button>
+                    <h1 class="font-[600] text-[24px] leading-[36px] text-[#253993]">N’hésitez pas à nous
+                        contacter
+                        pour toute
+                        question, ou demande d’informations.</h1>
+                    <img src="./images/phone-icon.png" class="h-[100px] w-[100px]" alt="">
+                    <p class="'text-[#252993] font-[600] text-[20px] leading-[30px]">Par téléphone au:</p>
+                    <p class="font-[600] text-[20px] leading-[30px] text-[#DA4167]">+1 (514) 333-6608</p>
+                    <p>Nos opérateurs sont
+                        disponible de lundi à vendredi, de 9h00 à 18h00.</p>
+                    <img src="./images/mail-icon.png" class="h-[100px] w-[100px]" alt="">
+                    <h1 class='text-[#252993] font-[600] text-[20px] leading-[30px]'>Par email, en nous
+                        envoyant
+                        votre message sur :</h1>
+                    <p class=" font-[600] text-[20px] leading-[30px] text-[#DA4167]">info@amyressources.ca
+                    </p>
+                    <img src="./images/whatsapp-icon.png" class="h-[100px] w-[100px]" alt="">
+                    <h1 class="'text-[#252993] font-[600] text-[20px] leading-[30px]">Ou par chat direct sur
+                        Whatsapp, au :</h1>
+                    <p class="font-[600] text-[20px] leading-[30px] text-[#DA4167]">+1 (514) 555-1234</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div
+        class="  h-[300px]  relative w-full  flex bg-gradient-to-b from-slate-200 to bg-transparent  z[-5] xl:h-[300px]  xl:relative xl:w-full  xl:flex lg:h-[300px]  lg:relative lg:w-full  lg:flex md:h-[300px]  md:relative md:w-full  md:flex">
+        <img src="./images/logo-shape-header.png" class="h-[120px]  top-[-20px] absolute left-[0%] z-[-1] 
+                xl:h-[120px]  xl:top-[0] xl:absolute xl:left-[0%]
+                lg:h-[120px]  lg:top-[0] lg:absolute lg:left-[0%] 
+                md:h-[120px]  md:top-[0] md:absolute md:eft-[0%] 
+                " alt="">
+        <img src="./images/logo-shape(16).png" alt="" class="z-[-1] h-[90px] absolute top-[-40px]  right-[18%]
+                xl:z-4 xl:h-[90px] xl:absolute xl:top-[21%]  xl:right-[18%]
+                lg:z-4 lg:h-[90px] lg:absolute lg:top-[21%]  lg:right-[18%]
+                md:z-4 md:h-[90px] md:absolute md:top-[1%]  md:right-[18%]">
+        <img src="./images/logo-shape(15).png" class="hidden top-[12%] right-[105px] h-[60px] 
+                xl:absolute xl:top-[12%] xl:right-[105px] xl:h-[60px]
+                lg:absolute lg:top-[12%] lg:right-[105px] lg:h-[60px]
+                md:absolute md:top-[12%] md:right-[105px] md:h-[60px]
+                " alt="">
+        <img src="./images/blue-shape-header.png" class="w-[20%] absolute z-[1]  block xl:hidden lg:hidden  right-0 top-[20%] 
+                xl:w-[20%] xl:absolute xl:z-[-1] xl:right-0 xl:top-[20%]
+                lg:w-[20%] lg:absolute lg:z-[-1] lg:right-0 lg:top-[20%]
+                md:w-[20%] md:absolute md:z-[-1] md:right-0 md:top-[20%] " alt="">
+        <img src="./images/logo-shape(14).png" alt="" class="absolute top-[0] h-[80px] left-[35%] z-[1] 
+                xl:absolute xl:top-[10%] xl:h-[80px] xl:left-[13%]
+                lg:absolute lg:top-[10%] lg:h-[80px] lg:left-[13%]
+                md:absolute md:top-[10%] md:h-[80px] md:left-[73%] md:z-1">
+        <img src="./images/shape.png" alt="" class="
+                absolute top-[50%] left-[30%] z-[-1] w-[40%]
+                xl:absolute xl:top-[10%] xl:left-[40%] xl:w-[10%]
+                lg:absolute lg:top-[10%] lg:left-[45%]
+                md:absolute md:top-[30%] md:left-[45%] md:w-[20%]">
+        <img src="./images/logo-shape(8).png" alt=""
+            class="hidden z-[-2] top-[0] h-[200px] right-[0] xl:absolute xl:z-[0] xl:top-[0] xl:h-[200px] xl:right-[20%] lg:absolute lg:z-[0] lg:top-[0] lg:h-[200px] lg:right-[20%] md:absolute md:z-[0] md:top-[0] md:h-[200px] md:right-[20%]">
+        <img src="./images/white-shape.png" alt="" class="absolute right-0 top-[10px] z-[-1]
+                xl:absolute xl:right-0 xl:top-[110px]
+                md:hidden md:right-0 md:top-[110px]
+                sm:absolute sm:right-0 sm:top-[110px] ">
+        <div class="w-[80%] mx-auto flex flex-col justify-center">
+            <div class="w-[70px] h-[84px] absolute top-[-20px] z-[-10] left-[50%] lg:hidden xl:hidden md:hidden"
+                style="background-image: url('./images/logo-shape\(5\).png');"></div>
+            <h1 class="font-[800] text-[40px] leading-[68px] text-[#253993] font-['Montserrat']"> Vous êtes candidat
+            </h1>
+
+            <h5 class="pt-[20px] font-[400] text-[20px] leading-[30px] text-[#414040]  z-[1]">Urna a venenatis
+                ullamcorper est
+                ut tellus suscipit quisque libero sollicitudin aenean</h5>
+        </div>
+    </div>
+    <!-- intro  -->
+    <div class="w-[100%] h-[400px] mt-[60px]
+   xl:w-[100%] xl:h-[400px] xl:mt-[80px]
+    lg:w-[100%] lg:h-[400px] lg:mt-[80px]
+    md:w-[100%] md:h-[400px] md:mt-[80px]
+    flex">
+        <div class="w-[90%] flex flex-col mx-auto
+        xl:w-[80%] xl:flex xl:flex-row xl:mx-auto
+        lg:w-[80%] lg:flex lg:flex-row lg:mx-auto
+        md:w-[90%] md:flex md:flex-col md:mx-auto">
+            <div class="flex flex-col w-[100%]
+            xl:flex xl:flex-col xl:w-[40%]
+            md:flex md:flex-col md:w-[90%]
+            lg:flex lg:flex-col lg:w-[40%]">
+                <h4 class=" font-semibold leading-6 w-[40%] text-[#1A2867]">Vous êtes à la recherche d'un
+                    travail ?</h4>
+                <h2 class=" text-[28px] font-semibold leading-10 text-[#1A2867]">Postulez en quelques clics seulement
+                    pour
+                    les jobs qui
+                    correspondent à vos compétences et
+                    disponibilités
+                </h2>
+                <p class="text-[#201E1E] font-normal leading-6">Quisque scelerisque morbi vitae tincidunt venenatis elit
+                    sed
+                    volutpat. Tincidunt
+                    integer nisl quis urna
+                    dui eu felis. Tellus facilisis amet porttitor erat lacus varius a eget. Sit mauris ac felis nec vel
+                    a
+                    arcu diam senectus. Lacus quam aenean turpis metus malesuada. Proin senectus feugiat nunc ultrices
+                    purus
+                    in. Viverra tempor vestibulum nunc nec.
+                    <br>
+                    <br>
+                    Aliquam eget at malesuada justo enim vitae. Tristique mauris purus gravida libero. Montes massa nisi
+                    eget porttitor ante. Sit dictum sit nulla quis pharetra iaculis mauris fermentum sed. Hendrerit
+                    lacus
+                    maecenas aliquet vel semper odio at pulvinar. Ac semper sed sed purus bibendum ipsum sed ultrices
+                    fusce.
+                    Eget morbi quam eu hac enim.
+                </p>
+                <a href="#" class="font-bold leading-6 text-[16px]">Inscrivez-vous</a>
+            </div>
+            <div class="ml-auto xl:ml-auto md:ml-auto lg:ml-auto">
+                <img src="./images/image.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- women  -->
+    <div class="bg-[#f7f7f7] overflow-hidden flex  flex-row relative justify-center py-10 px-8 h-[65vh] mt-[800px]
+    xl:flex xl:relative xl:justify-center xl:py-10 xl:px-8 xl:h-[40vh] xl:mt-[200px]
+    lg:flex lg:relative lg:justify-center lg:py-10 lg:px-8 lg:h-[90vh] lg:mt-[420px] 
+    md:flex md:relative md:justify-center md:py-10 md:px-8 md:h-[62vh] md:mt-[595px]
+    ">
+        <div class="flex z-10  flex-col  justify-center items-center gap-16 mx-auto
+        xl:flex xl:z-10  xl:flex-row xl:w-[70%] xl:justify-center xl:items-center xl:gap-16
+        lg:flex lg:z-10   lg:justify-center lg:items-center lg:gap-16
+        md:flex md:z-10   md:justify-center md:items-center md:gap-16">
+            <div class="relative">
+                <img class="w-[700px] lg:w-full md:w-[90%]" src="./images/image-1(1).png" alt="">
+                <img src="./images/shape.png" class="absolute top-[80px] left-[60px] z-[-1]" alt="">
+            </div>
+            <div class="flex flex-col gap-10 w-full w-[50%]
+            xl:flex xl:flex-col xl:gap-10 xl:w-full 
+            md:flex md:flex-col md:gap-10 md:w-full md:w-[50%]
+            lg:flex lg:flex-col lg:gap-10 lg:w-full lg:w-[50%]
+            ">
+                <img class="w-16" src="./images/quotes.png" alt="quotes">
+                <p class=" text-[#201E1E] font-normal leading-7">Je tiens à partager mon expérience positive
+                    avec <span class="text-[#253993]">Amy
+                        Ressources</span>.
+                    Grâce à eux, j'ai eu
+                    la chance de travailler sur plusieurs missions intérimaires passionnantes chez différents clients.
+                    Leur expertise dans le recrutement m'a permis de trouver des missions adaptées à mes compétences et
+                    à mes intérêts.</p>
+
+                <h4 class="font-semibold leading-6 text-[#414040]">
+                    Chloe Campbell <br>
+                    <span class="text-[#6E6D6D] font-normal leading-6 text-[16px]">Réceptionniste en Hôtellerie</span>
+                </h4>
+                <img src="./images/blue-shape.png" class="absolute z-[-1] w-[20%] right-[-90px]
+                xl:w-[10%] xl:right-[-90px]
+                lg:w-[20%] lg:right-[-90px] lg:top-[30%]
+                md:w-[20%] md:right-[-90px] md:top-[40%]" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- gallery  -->
+    <div
+        class="flex flex-col mb-[20px]  mt-[20px]  w-[100%]
+    xl:flex xl:items-center xl:px-40 xl:gap-20 xl:py-10 xl:flex-col xl:mb-[70px]
+    md:flex md:items-center md:px-40 md:gap-10 md:py-0 md:flex-col md:mb-[70px] 
+    lg:flex lg:items-center lg:justify-center lg:ml-[10px] lg:gap-20 lg:py-10 lg:flex-col lg:mb-[70px] lg:w-[100%] lg:mx-auto">
+        <div class="text-[#1A2867] w-[90%] mx-auto  flex flex-col  
+        xl:w-full  xl:flex xl:flex-col xl:gap-5 xl:h-[20vh] xl:py-10
+        md:w-full  md:flex md:flex-col md:gap-5 md:h-[20vh] md:py-10
+         lg:flex lg:flex-col lg:gap-x-10 lg:h-[0] lg:py-10 lg:w-[100%]">
+            <h4 class="text-[16px] font-semibold leading-6 w-[100%] mx-auto">Vous êtes à la recherche d'un travail ?
+            </h4>
+            <h2 class="text-[28px] font-semibold w-[100%] leading-10  lg:w-[75%]">Quel que soit votre métier ou
+                vos
+                compétences, nous
+                avons
+                les offres d'emploi qu'il vous faut.</h2>
+            <img src="./images/underline.png"
+                class="w-[200px] h-[20px] xl:w-[10%] xl:h-[10%] lg:w-[10%] lg:h-[10%] md:w-[10%] md:h-[10%]" alt="">
+        </div>
+        <div class="grid grid-cols-3 mx-auto w-[90%] mt-[20px]  gap-2 justify-items-center
+        lg:grid-cols-3 lg:gap-[20px] pt-[10px] lg:py-8 lg:w-[90%] lg:mx-auto
+        xl:grid xl:grid-cols-6 xl:gap-40   xl:py-8
+        md:grid md:grid-cols-3 md:gap-10  md:py-0 md:w-[100%]
+             ">
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(19).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 lg:text-[16px] xl:text-[16px] text-[10px]  ">
+                    Assistants
+                    Administratifs</p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(1).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E]  font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Réceptionniste et Commis de bureau
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(11).png" alt="">
+                <p
+                    class="w-auto mx-auto text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px] ">
+                    Comptabilité et Finance
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class=" w-auto mx-auto" src="./images/icon-wrap(9).png" alt="">
+                <p
+                    class="w-auto mx-auto text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Administration
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class=" w-auto mx-auto" src="./images/icon-wrap(13).png" alt="">
+                <p
+                    class="w-auto mx-auto text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Centre d’appels
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(14).png" alt="">
+                <p
+                    class="w-auto mx-auto text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Service à la clientèle
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class=" w-auto mx-auto" src="./images/icon-wrap(15).png" alt="">
+                <p
+                    class="w-auto mx-auto text-[#201E1E] font-normal leading-5  xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Ressources Humaines
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(16).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Technologie de l’Information
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class=" w-auto mx-auto" src="./images/icon-wrap(17).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Ventes et Marketing
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(18).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Secteur Bancaire et Financier
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(6).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5  xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Personnel d’événements spéciaux et conférence
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(3).png" alt="">
+
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5  xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Remplacement de congé de maternité
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(2).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px] ">
+                    Gestion d’inventaire
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class=" w-auto mx-auto" src="./images/icon-wrap(8).png" alt="">
+                <p
+                    class=" w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px] ">
+                    Ingénierie
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(4).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Entrepôt et Distribution
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%]">
+                <img class=" w-auto mx-auto" src="./images/icon-wrap(7).png" alt="">
+                <p
+                    class="w-auto mx-auto text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px]">
+                    Techniques et métiers
+                </p>
+            </div>
+            <div class="w-[60%] lg:w-[100%] xl:w-[100%] items-center">
+                <img class="w-auto mx-auto " src="./images/icon-wrap(12).png" alt="">
+                <p
+                    class=" text-center text-[#201E1E] font-normal leading-5 xl:text-[16px] text-[10px] lg:text-[16px] w-auto mx-auto ">
+                    Coordination de Shift
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- form  -->
+    <div class="flex items-center flex-col py-20 bg-[#253993] mt-[90px]">
+        <div class="text-white w-full px-8 lg:w-[73%] mx-auto flex flex-col gap-5  py-10">
+            <h4 class="text-[16px] font-semibold leading-6">Inscription</h4>
+            <h2 class="text-[28px] font-semibold leading-10 w-[75%]">Inscrivez-vous dès maintenant pour trouver des
+                missions correspondant à vos compétences et à vos disponibilités.</h2>
+            <img src="" alt="-------">
+            <p class="w-[90%]">Après avoir rempli le formulaire d'inscription, l'un de nos opérateurs vous
+                contactera
+                dans les plus
+                brefs délais pour finaliser votre inscription et vous accompagner dans votre recherche de missions
+                intérimaires.</p>
+        </div>
+
+        <form class="text-white w-full md:w-[72%] lg:w-[72%]">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="relative w-full mb-3">
+                        <label class="block capitalize font-bold  leading-6  mb-2" htmlfor="grid-password">
+                            Prénom
+                        </label>
+                        <input type="text"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            value="lucky.jesse">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="relative w-full mb-3">
+                        <label class="block capitalize font-bold  leading-6  mb-2" htmlfor="grid-password">
+                            Nom
+                        </label>
+                        <input type="text"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            value="lucky.jesse">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 px-4">
+                    <label class="block capitalize font-bold  leading-6  mb-2" htmlfor="grid-password">
+
+                        <div class="flex justify-between">
+                            <span class="font-bold leading-6">Vous êtes</span>
+                            <span class=" italic font-normal leading-6 text-[#9B9A9A]">Facultatif</span>
+                        </div>
+                    </label>
+                    <select data-te-select-init class=" relative rounded  px-3 py-3 bg-white text-sm shadow  w-full">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                    </select>
+                </div>
+
+
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="relative w-full mb-3">
+                        <label class="block capitalize font-bold  leading-6  mb-2" htmlfor="grid-password">
+                            Adresse email
+                        </label>
+                        <input type="email"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            value="jesse@example.com">
+                    </div>
+                </div>
+
+
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="relative w-full mb-3">
+                        <label class="block capitalize font-bold  leading-6  mb-2" htmlfor="grid-password">
+                            Numéro de téléphone
+                        </label>
+                        <input type="number"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            value="00000000">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 px-4">
+                    <label class="block capitalize font-bold  leading-6  mb-2" htmlfor="grid-password">
+
+                        <div class="flex justify-between">
+                            <span class="font-bold leading-6">Ville</span>
+                            <span class=" italic font-normal leading-6 text-[#9B9A9A]">Facultatif</span>
+                        </div>
+                    </label>
+                    <select data-te-select-init class=" relative rounded  px-3 py-3 bg-white text-sm shadow  w-full">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                    </select>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- questions  -->
+    <div class=" block lg:flex  justify-center px-5  items-center mx-auto py-20 w-[90%]">
+        <div class="w-full lg:w-[500px] flex flex-col gap-3">
+            <h4 class=" text-xs font-semibold leading-6 text-[#1A2867]">
+                Questions fréquentes
+            </h4>
+            <h2 class=" text-[28px] font-semibold leading-10 text-[#1A2867]">
+                Voici une liste des questions les plus fréquemment posées par les candidats
+            </h2>
+            <img src="./images/underline.png" class="w-[20%] h-[20px]" alt="========">
+            <p class="text-[#201E1E] font-normal leading-6">Quisque scelerisque morbi vitae tincidunt venenatis elit
+                sed
+                Urna pellentesque mauris nunc nec senectus. Dictumst in magna faucibus ultrices quam blandit dictum
+                at
+                amet iaculis integer eleifend habitasse.
+                <br>
+                <br>
+                Amet ac porttitor posuere arcu diam. Aliquet erat sit velit pretium enim praesent quam donec ac.
+                Bibendum sed dui velit fringilla et nibh in nisl. Purus dignissim suspendisse lorem id volutpat
+                massa
+                pharetra. Morbi duis.
+            </p>
+            <div class="flex items-center text-[#DA4167] gap-4 pt-4">
+                <a href="#" class="font-bold leading-6 text-[16px]">Nous contacter</a>
+                <div class="bg-[url('./img/logo-shape.svg')]">
+                    <img src="./img/angle-right.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-md mx-auto">
+
+            <!-- Accordion Container -->
+            <div class="border rounded-lg shadow-md bg-white  md:w-[100%] lg:w-[100%] xl:w-[900px]">
+
+                <!-- Accordion Item 1 -->
+                <div class="border-b">
+                    <button class="w-full p-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Felis tincidunt quam euismod fermentum ut amet purus vel
+                            ?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="hidden p-4">
+                        <!-- Content for Accordion Item 1 -->
+                        <p>This is the first item's accordion body. It is shown by default, until the collapse
+                            plugin
+                            adds the appropriate classes
+                            that we use to style each element. These classes control the overall appearance, as well
+                            as
+                            the showing and hiding via
+                            CSS transitions. You can modify any of this with custom CSS or overriding our default
+                            variables. It's also worth noting
+                            that just about any HTML can go within the .accordion-body, though the transition does
+                            limit
+                            overflow.</p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="border-b">
+                    <button class="w-full p-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Amet ac suscipit ultrices id nec massa pulvinar leo
+                            ipsum
+                            ?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="hidden p-4">
+                        <!-- Content for Accordion Item 2 -->
+                        <p>Consectetur in auctor aliquam ornare netus. Elementum pellentesque purus augue sit dictum
+                            augue risus. Nunc ullamcorper
+                            lacus nunc fames sapien convallis massa lacus aenean. Augue nisl augue quis tristique
+                            eget.
+                            Arcu nunc nibh sed est in
+                            eget.
+                            Sit libero a sit amet libero. Donec tortor neque tincidunt tempus potenti. Fermentum
+                            magna
+                            egestas.</p>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="border-b">
+                    <button class="w-full p-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">At vel lobortis turpis mauris amet pharetra eu
+                            sollicitudin
+                            ?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="hidden p-4">
+                        <!-- Content for Accordion Item 3 -->
+                        <p>Sem blandit nec arcu at in. Fringilla a in dis pellentesque congue bibendum convallis.
+                            Non
+                            ullamcorper sed porta et
+                            vitae tristique turpis mattis risus.
+                            Sit morbi tristique placerat quam mi vestibulum. Nec sit felis sed venenatis ut integer
+                            dui
+                            lorem. Orci quam in iaculis
+                            viverra in suspendisse interdum dolor. Sit non tempus sed eget vestibulum nibh.</p>
+                    </div>
+                </div>
+                <div class="border-b">
+                    <button class="w-full p-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Pellentesque non curabitur tempus eu sed mauris ?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="hidden p-4">
+                        <!-- Content for Accordion Item 3 -->
+                        <p>Ultrices curabitur auctor commodo volutpat interdum fermentum neque non id. Mi mauris
+                            proin
+                            ac neque enim sem vel sapien
+                            facilisis. Mi nunc volutpat tortor semper pellentesque sed cursus. Sit turpis cras in
+                            interdum magna. Sed vitae elit
+                            dolor adipiscing felis.
+                            Tristique mattis aliquet orci elementum molestie vel nunc nulla. Posuere sagittis augue.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-b">
+                    <button class="w-full p-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Rutrum enim sit ornare in fermentum elementum gravida
+                            ?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="hidden p-4">
+                        <!-- Content for Accordion Item 3 -->
+                        <p>Sit luctus velit sed commodo et arcu sit suspendisse vitae. Ultricies purus nibh ac
+                            sagittis
+                            egestas lorem diam.
+                            Dolor leo sapien ullamcorper facilisis elementum. Nullam convallis hac nullam tortor non
+                            nisl
+                            facilisis ultrices augue.
+                            Urna sit velit sem enim phasellus nunc at leo varius. Aliquet feugiat sit mollis enim ac
+                            eu.
+                            Eget egestas ante volutpat
+                            id. Sed.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <footer class="relative">
+        <img src="./images/logo-shape(10).png"
+            class="absolute top-[80px] right-[600px] z-[1]  xl:left-[1000px] md:left-[160px]" alt="">
+        <div class=" mt-[00px] md:mt-[10px] lg:mt-[300px] ">
+            <div class="grid grid-rows-2  h-[400px] w-[90%]  p-5 content-center mx-auto bg-white  relative  border-2 rounded-lg shadow-lg top-[80px] 
+                        xl:grid xl:grid-cols-2 xl:w-[80%]  xl:p-20 xl:content-center xl:mr-auto xl:ml-auto  xl:relative  xl:border-2 xl:rounded-lg xl:shadow-lg xl:top-[80px]
+                        lg:grid lg:grid-cols-2 lg:w-[80%]  lg:p-20 lg:content-center lg:mr-auto lg:ml-auto   lg:relative  lg:border-2 lg:rounded-lg lg:shadow-lg lg:top-[80px]
+                        md:grid md:grid-cols-2 md:w-[80%]  md:p-20 md:content-center md:mr-auto md:ml-auto   md:relative  md:border-2 md:rounded-lg md:shadow-lg md:top-[80px]
+                        ">
+                <div class="w-[90%] mx-auto xl:w-[100%] md:w-[100%] lg:w-[100%] bg-white ">
+                    <p class="font[600] text-[34px] leading-[36px] text-[#253993] font-extrabold">Êtes-vous prêt à
+                        commencer une
+                        collaboration avec
+                        nous ?</p>
+                    <p class="font[600] text-[16px] leading-[24px] text-[#414040]">Nous serions ravis de discuter
+                        avec
+                        vous de la façon dont nous pouvons vous aider à atteindre vos
+                        objectifs commerciaux.</p>
+                    <p class=" mt-[20px] font[700] text-[16px] leading-[24px] text-[#DA4187]">Exprimer mon besoin
+                        <span class="w-[16px] h-[16px]">></span>
+                    </p>
+                </div>
+                <div
+                    class="mt-[40px] hidden  h-[20px] mr-auto xl:mt-[40px] xl:ml-auto lg:mt-[40px] lg:ml-auto md:mt-[40px] md:ml-auto ">
+                    <p class="font[700] text-[16px] leading-[24px] text-[#DA4187]">Exprimer mon besoin
+                        <span class="w-[16px] h-[16px]">></span>
+                    </p>
+                </div>
+                <img src="./images/logo-shape(11).png"
+                    class="absolute top-[140px]  z-[1] left-[400px] xl:absolute xl:top-[295px]  md:top-[295px]" alt="">
+            </div>
+            <div
+                class="w-[100%] h-[100%] ml-auto mr-auto md:w-[100%] md:h-[100%] md:ml-auto md:mr-auto xl:w-[100%] xl:h-[100%] xl:ml-auto xl:mr-auto lg:w-[100%] lg:h-[100%] lg:ml-auto lg:mr-auto">
+                <div class="flex flex-col   w-[100%] ml-auto mr-auto bg-[#F6FBFD]  lg:flex lg:flex-col lg:justify-between  lg:w-[100%] lg:ml-auto lg:mr-auto justify-normal  lg:p-[150px] 
+                        xl:flex xl:flex-row xl:justify-between  xl:w-[100%] xl:ml-auto xl:mr-auto  xl:p-[150px]
+                    md:flex md:flex-col md:justify-between  md:w-[100%] md:ml-auto md:mr-auto  md:p-[150px]
+                        ">
+                    <div class="flex flex-col xl:flex xl:flex-col
+                             w-[90%] mx-auto lg:flex-col lg:flex mt-[100px] ">
+                        <img src="./images/Logo(1).png" alt=""
+                            class="xl:ml-[60px] lg:ml-[240px] md:ml-[95px] mx-auto w-[200px] md:mx-auto   md:w-[200px] ">
+                        <p
+                            class="xl:ml-20 xl:text-left xl:mr-auto lg:ml-[60px] md:ml-[0px] pt-[10px] text-[16px] leading-[24px] font-[400] text-[#9B9A9A] text-center">
+                            ©
+                            Copyright
+                            Amy Ressources
+                            2023 - Tous droits réservés - Mentions légales - Conditions générales d'utilisation</p>
+                    </div>
+                    <div class="flex  justify-betweenw-[90%] mx-auto py-[20px]">
+                        <img src="./images/social-link.png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                        <img src="./images/social-link(1).png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                        <img src="./images/social-link(2).png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                        <img src="./images/social-link(3).png" alt=""
+                            class="xl:mr-[10px] lg:mr-[10px] md:mr-[10px] h-[50px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                bulletActiveClass: 'swiper-pagination-bullet-active',
+                clickable: 'true',
+
+            },
+            // And if we need scrollbar
+        });
+        const swiper1 = new Swiper('.swiper1', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // And if we need scrollbar
+        });
+
+        const sidebar = document.getElementById("sidebar");
+        const sidebarToggle = document.getElementById("sidebarToggle");
+        const close = document.getElementById('close')
+
+        sidebarToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("translate-x-0");
+            sidebar.classList.toggle('hidden')
+            document.body.classList.toggle('overflow-y-hidden')
+            document.body.classList.toggle('opacity-1')
+        });
+
+        close.addEventListener('click', function () {
+
+            sidebar.classList.toggle("hidden");
+            document.body.classList.toggle('overflow-y-hidden')
+            document.body.classList.toggle('opacity-1')
+
+
+        })
+        const accordionItems = document.querySelectorAll('.border-b');
+
+        accordionItems.forEach(item => {
+            const button = item.querySelector('button');
+            const content = item.querySelector('.hidden');
+
+            button.addEventListener('click', () => {
+                content.classList.toggle('hidden');
+                const icon = button.querySelector('i');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            });
+        });
+        const menuBar = document.getElementById('menuBar');
+        const menuButton = document.getElementById('menuButton');
+        function toggleMenubar() {
+            menuBar.classList.toggle('-translate-x-full');
+        }
+        menuButton.addEventListener('click', toggleMenubar);
+    </script>
+</body>
+
+</html>
